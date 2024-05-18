@@ -91,6 +91,17 @@ def annotate_pedestrians(
     return Response(content=annotated_img_stream.read(), media_type="image/jpeg")
 
 
+@app.get("/info")
+def get_model_info():
+    data = {
+        "model_name": "Pedestrian detection",
+        "model_arquitecture": "yolov8n",
+        "classes": ["person"],
+        "input_type": "image"
+    }
+    return data
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("app:app", reload=True)

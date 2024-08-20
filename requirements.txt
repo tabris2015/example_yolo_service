@@ -3,3 +3,7 @@ uvicorn==0.29.0
 numpy==1.26.4
 ultralytics==8.2.12
 pydantic-settings==2.2.1
+-f https://download.pytorch.org/whl/cpu
+torch
+-f https://download.pytorch.org/whl/cpu
+torchvision

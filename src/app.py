@@ -104,4 +104,4 @@ def get_model_info():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app:app", reload=True)
+    uvicorn.run("app:app", port=8080, host='0.0.0.0')
